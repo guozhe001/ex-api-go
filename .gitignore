@@ -19,3 +19,4 @@
 .idea/
 
 /config/config_api_key.toml
+/vendor/
