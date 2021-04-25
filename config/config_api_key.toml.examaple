@@ -1,0 +1,9 @@
+[binance]
+    api_key = ""
+    secret = ""
+
+
+[bithumb]
+    api_key = ""
+    secret = ""
+
