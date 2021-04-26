@@ -13,7 +13,13 @@ func main() {
 	apiKey, secret := GetApiKeyAndSecret(constant.ExchangeBinance)
 	fmt.Printf("apiKey=%s, secret=%s\n", apiKey, secret)
 	client := binance.NewClient(apiKey, secret)
-	getAccount(client)
+	balances, err := getAccount(client)
+	if err != nil {
+		panic(err)
+	}
+	for _, b := range balances {
+		fmt.Print(b)
+	}
 }
 
 // GetApiKeyAndSecret 获取指定交易所的apikey和secret
